@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>examples landing</title>
+
+    <!-- load script-->
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer type="text/javascript" src='js/MyDoodles.js'></script>
+    <script defer type="text/javascript" src='js/examples.js'></script>
+
+    <!--load css-->
+    <link rel="stylesheet" href="landing.css">
+
+</head>
+<body style="margin: 0">
+    <a href="./documentation.html" class="button">Go to documentation</a>
+    <div id="banner">
+            <h1 class="centerText">MyDoodles.js</h1>
+    </div>
+
+    <div id="randomNS">
+
+    </div>
+    <p style="height:250px; display:flex;justify-content: center;align-items : center;">
+        This is the random theme application in block with a message, where user can refresh the block and the background color
+        will randomly change to a color. There are also function that allows user to select the color, which are presented
+        below. Sample use case are any website that want automatically generated background color, or some website that a "sentence for today" etc.
+    </p>
+    <div id="weatherNS" style="display: inline-block; float: left; margin-right: 180px;">
+
+    </div>
+    <p style="height:250px; display:flex;justify-content: center;align-items : center;">
+        This is the weather theme application in block, where in the real world cases the weather data and image are get from server.
+        Sample use
+    </p>
+
+    <div id="moodNS" style="display: inline-block; float: left;">
+
+    </div>
+    <p style="height:250px; display:flex;justify-content: center;align-items : center;">
+        This is the calender + mood theme application in block, where there is an user interaction for user to choose their mood
+        for that day. Once the mood were chosen, the corresponding words for moods will presented and the background color of webpage
+        will be changed. This can be used for website like online website for diary where different background can be presented
+        with different selection for that day.
+    </p>
+
+    <div id="selection" style="display: inline-block; float: left;">
+
+    </div>
+    <p style="height:250px; display:flex;justify-content: center;align-items : center;">
+        This is showing the selection available version of the block (whether to offer the selection is decided by developer,
+        see documentation for detail). If provided, the user can selected the corresponding color they want for background
+        and for weather there shouldn't be choices but since this is not connect to server, choice are provided to present
+        how it works. Try click on different radio and drop down menu to see changes.
+    </p>
+
+
+</body>
+</html>

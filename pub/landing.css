@@ -1,0 +1,11 @@
+#banner{
+    background-color: lemonchiffon;
+    height: 200px;
+    text-align: center;
+}
+
+.centerText{
+    padding: 60px;
+    margin:0;
+}
+

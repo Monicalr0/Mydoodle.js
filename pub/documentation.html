@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Documentation</title>
+</head>
+<body>
+    <h1>MyDoodles.js</h1>
+    <div>
+        <h2>I.Getting Started</h2>
+        <p> MyDoodles.js is a library that allows you to easily create a block that can change automatically with
+            theme like random color, weather, calender+mood etc. It also contains some user interaction.
+        </p>
+        <p>
+            To get started, simply include MyDoodles.js file and the three png image for weathersICON in your file(you
+            can also choose your own image as long as they are of "png" and corresponding name, then you can easily use
+            the function inside (see details in below).
+        </p>
+        <p>
+            An easy start would be create a constructor like using code "const bg = new BlockGenerator();"(substitute bg
+            for any variable name you like), and then make block by calling "bg.makeBlock", default value are provided
+            for this function so this would be the minimum needed to start using the library.
+        </p>
+    </div>
+    <div>
+        <h2>II. List of APIs</h2>
+        <ol>
+            <li>BlockGenerator(): The basic function for starting to use the library, will automatically create an
+                array storing all block created using this block generator.
+            </li>
+
+            <li>
+                makeBlock(theme, inputText, type, displayChoice, parentNode = ): The mandatory function that create an
+                actual block to modify on, as the mandatory object for this library is a block. All other function are
+                based on the call of this function. (Most of them need input of the block ID returned by this function.
+                The return value is the id of the block created. Default is a block that has different background color
+                upon refresh, with message "Input Here".
+
+                <ul> Input parameter for this function:
+                    <li>
+                        theme: the theme for this block, default is "random" which generated random color. If selection
+                        is enabled (by parameter displayChoice = 1), then user can change the theme later, and the library
+                        will automatically call function updateView to update the view. selections are "random", "weather"
+                        "mood-default"
+                    </li>
+                    <li>
+                        inputText: the input text the developer want to present inside the block, default will be "Input
+                        Here"
+                    </li>
+                    <li>
+                        type: default is normal, means this is applied only to the block selected (except for mood the
+                        background color for whole page by setting)
+                    </li>
+                    <li>
+                        displayChoice: default is 0. 0 standards for the theme is locked, 1 stands for the selection of
+                        theme are offered to user.
+                    </li>
+                    <li>
+                        parentNode: default is body. This is the parent node in html the developers want the block attached to.
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                changeTheme(theme, blockID, inputText = null): This function can be used by developer to change the theme
+                of some blocks by themselves. The meaning of parameter is the same as makeBlock function. The changed
+                block will have the same size as before but with content change to corresponding theme.
+            </li>
+
+            <li>
+                updateRadio(theme, radioID, blockID): This is a build-in function that generally developer won't need to
+                use. When developer want to offer the user the selection of different theme, the radio of different types
+                of that theme will also be offered to user (like different color for "random"). The updateRadio function
+                is automatically called when user change to another theme, in order to change corresponding radio form to corresponding
+                staff.(e.g. if theme are changed from the "random" to "weather", then radio are changed from "color" to
+                "weathers")
+                <ul>
+                    <li>
+                        theme: newly chosen theme. No default
+                    </li>
+                    <li>
+                        radioID: the ID of corresponding radio form.
+                    </li>
+                    <li>
+                        blockID: the ID of the corresponding block changing theme.
+                    </li>
+                </ul>
+            </li>
+
+            <li>updateView(theme, blockID = "null", inputText = null, value=null): This is the core function of this library
+            while this is also a function generally won't be called by developer but by library itself. When this function
+                are called, it will update the block content based on input.
+                <ul>
+                    <li>
+                        theme: the theme to change to
+                    </li>
+                    <li>
+                        blockID: the corresponding block to change
+                    </li>
+                    <li>
+                        inputText: Only needed when change to random theme, the text developer want to present.
+                    </li>
+                    <li>
+                        value: this is for automatically update when user select a theme and a specific type of that theme
+                        , will pass in the value the user wants the block to change to.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                changeSize(width, height, blockID): Change size of corresponding block. Meaning is shown by the name of
+                parameter.
+            </li>
+            <li>
+                horizontalCenter(blockID): Center the content of certain div, only takes blockID to locate the block to change.
+            </li>
+            <li>
+                loadChoice(theme):This is a function that won't be called by developers, this is used for updateRadio to
+                load the available choice for certain themes. Return an array of string containing available choices of
+                the input themes.
+            </li>
+        </ol>
+    </div>
+
+</body>
+</html>
