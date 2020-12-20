@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/csc309-fall-2020/js-library-maminyi/issues"
   },
-  "homepage": "https://github.com/csc309-fall-2020/js-library-maminyi#readme"
+  "homepage": "https://github.com/csc309-fall-2020/js-library-maminyi#readme",
+  "dependencies": {
+    "express":"*"
+  }
 }
