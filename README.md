@@ -1,6 +1,6 @@
 # js-library-maminyi
 
-This is the library called "Mydoodle.js"
+This is the library called "Mydoodle.js". It's a course project I worked on independently. 
 
 ## Landing Page
 https://tranquil-harbor-96087.herokuapp.com/
